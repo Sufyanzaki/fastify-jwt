@@ -21,3 +21,6 @@
   No use of statemanagment tools instaed i made a custom hook called useLocalstorage to set and setch data from localstorage if needed
   swagger API docs => http://localhost:5000/docs   
   Dont forget to replace your mongodb connection string to get started :)
+  
+# Note
+Till now there is no button or API to destroy cookie and use from localstorage so one need to destroy it manually to logout the user
