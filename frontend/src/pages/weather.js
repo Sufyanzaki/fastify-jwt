@@ -11,6 +11,7 @@ import {
 } from "mdb-react-ui-kit";
 import axios from "axios";
 import Spinner from "./Spinner/Spinner";
+import { ToastContainer, toast } from 'react-toastify';
 
 const Weather = () => {
 
@@ -33,11 +34,13 @@ const Weather = () => {
     const handleSubmit = () => {
         setLoading(true);
         axios.get(`https://api.weatherbit.io/v2.0/current?city=${form.city}&country=PK&key=49c00ab7edd1404589f58a5d033c7381`)
-            .then(res => { setResp(res.data.data[0]); setLoading(false) }).catch(err => console.log(err))
+            .then(res => { res.data ? setResp(res.data.data[0]) : toast("Something went wrong"); setLoading(false) })
+            .catch(err => console.log(err))
     }
 
     return (
         <section className="vh-100">
+            <ToastContainer/>
             <MDBContainer className="h-100 py-5">
                 <MDBRow className="justify-content-center align-items-center h-100">
                     <MDBCol md="8" lg="6" xl="4">
