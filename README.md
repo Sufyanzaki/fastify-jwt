@@ -14,4 +14,8 @@
   MDBootstrap for react jsx designing
   dotenv to store clitical keys in variables
   fastify to create fast API
-   react-toastify to show friendly errors to users
+  react-toastify to show friendly errors to users
+
+  No use of statemanagment tools instaed i made a custom hook called useLocalstorage to set and setch data from localstorage if needed
+  swagger API docs => http://localhost:5000/docs   
+  Dont forget to replace your mongodb connection string to get started
